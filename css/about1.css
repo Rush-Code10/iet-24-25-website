@@ -1,0 +1,169 @@
+.about {
+  height: 100vh;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .main {
+  width: 1290px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  /* Added */
+}
+
+.about .main img {
+  width: 580px;
+  max-width: 100%;
+  height: auto;
+  padding: 0 10px;
+}
+
+.all-text {
+  width: 600px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.all-text h4 {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: black;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.all-text h1 {
+  font-size: 50px;
+  color: #9C67AB;
+  font-weight: 700;
+}
+.auto{
+  font-size: 60px;
+  color: #5e2d68;
+  font-weight: 700;
+  
+ 
+}
+.all-text p {
+  font-family: 'Nunito';
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.btn1 {
+  padding-top: 20px;
+  display: flex;
+}
+
+.button1 {
+  padding: 0.8em 1.8em;
+  border: 2px solid rgb(2, 2, 2);
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #4F1B59;
+}
+
+.button1::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #4F1B59;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.button1:hover::before {
+  width: 105%;
+}
+
+.button1:hover {
+  color: #ffffff;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .dept-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .dept-list li {
+    list-style-type: none;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .about {
+    height: auto;
+  }
+
+  .about .main img {
+    width: 450px;
+  }
+
+  .about .btn1 {
+    padding-bottom: 20px;
+  }
+
+  .btn1 {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about .main img {
+    width: 100%;
+    margin: 0 20px;
+    /* Added */
+  }
+
+  .all-text {
+    width: 100%;
+    text-align: center;
+    /* Added */
+  }
+
+  .all-text h4 {
+    font-size: 16px;
+  }
+
+  .all-text h1 {
+    font-size: 40px;
+  }
+
+  .all-text p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .btn1 {
+    padding-top: 20px;
+  }
+}

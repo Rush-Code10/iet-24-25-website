@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/*  */
+/* FAQS */
+/*  */
+.faq-drop {
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+.accordion {
+  background-color: #863f94;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 70%;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border: 2px solid rgb(13, 13, 13);
+  border-radius: 4px;
+}
+.accordion:after {
+  content: "\2304";
+  font-size: 20px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+  margin-top: -7px;
+}
+.active,
+.accordion:hover {
+  background-color: #471053;
+  color: white;
+}
+.accordion:after {
+  content: "\2304";
+  font-size: 20px;
+  color: black;
+  float: right;
+  margin-left: 5px;
+  margin-top: -7px;
+}
+.active:after {
+  content: "\2303";
+  color: #230429;
+  margin-top: 0px;
+}
+.panel {
+  padding: 0 18px;
+  color: white;
+  background-color: #863f94;
+  opacity: 0.6;
+  width: 70%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border: 2px solid black;
+  text-align: left;
+  font-size: 18px;
+}
+
+
+

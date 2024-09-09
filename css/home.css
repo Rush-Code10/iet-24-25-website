@@ -1,0 +1,400 @@
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar-brand img {
+  max-width: 130px;
+  /* Adjust the maximum width of the logo */
+  max-height: 40px;
+  /* Adjust the maximum height of the logo */
+}
+
+/* #homepage {
+      background: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=compress,format&crop=entropy&fit=crop&w=1199&h=799&q=80");
+      background-size: 100% 100%;
+      opacity: 0.9;
+      height: 100vh;
+      background-size: cover;
+      justify-content: center;
+      align-items: center;
+      background-position: center center; 
+  } */
+.navbar {
+  filter: brightness(200%);
+}
+
+#homepage {
+  position: relative;
+  height: 100vh;
+  opacity: 1;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+}
+
+#homepage video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Darken the overlay */
+}
+.bgcolor.scrolled{
+    background-color:#221524;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  /* Set a high z-index value */
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff;
+  /* Update the hover color to match */
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    margin: 10px 0;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-start;
+  }
+
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 9999;
+    /* Set a high z-index value */
+  }
+}
+
+.col-md-12 {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.col-md-12 h5 {
+  font-size: 24px;
+  color: #1abc9c;
+}
+
+.col-md-12 h1 {
+  font-size: 84px;
+  color: #fff;
+}
+
+.intro-desc {
+  font-size: 22px;
+  color: #fff;
+  margin-top: 20px;
+  font-family: helvetica, arial, tahoma, verdana;
+  margin-left: 10px;
+}
+
+.colour-splash {
+  color: #6ac6db;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+  text-align: center;
+  line-height: 40px;
+  color: #000;
+  font-size: 20px;
+
+}
+
+.social-icons a:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+/* CSS FOR SCROLL BUTTOn
+   */
+.scrolldown {
+  --color: white;
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: absolute;
+  left: 49%;
+  top: 120%;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: var(sizeX / 2);
+  border: calc(var(--sizeX) / 10) solid var(--color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #2a547066;
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+
+
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid var(--color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+  animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+  animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width:700px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    /* Set a high z-index value */
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  .scrolldown {
+    --color: white;
+    --sizeX: 30px;
+    --sizeY: 50px;
+    position: absolute;
+    left: 50%;
+    top: 110%;
+    width: var(--sizeX);
+    height: var(--sizeY);
+    margin-left: var(sizeX / 2);
+    border: calc(var(--sizeX) / 10) solid var(--color);
+    border-radius: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .col-md-12 h1 {
+    font-size: 65px;
+    color: #fff;
+  }
+}
+
+@media (max-width:680px) {
+  .scrolldown {
+    --color: white;
+    --sizeX: 30px;
+    --sizeY: 50px;
+    position: absolute;
+    left: 45%;
+    top: 110%;
+    width: var(--sizeX);
+    height: var(--sizeY);
+    margin-left: var(sizeX / 2);
+    border: calc(var(--sizeX) / 10) solid var(--color);
+    border-radius: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .col-md-12 h1 {
+    font-size: 50px;
+    color: #fff;
+  }
+}
+@media (max-width:900px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    /* Set a high z-index value */
+  }
+  .col-md-12 h1 {
+    font-size: 55px;
+    color: #fff;
+  }
+}
+@media (max-width:600px) {
+  .navbar{
+    position: fixed;
+    width: 100%;
+  }
+  .col-md-12 h1 {
+    font-size: 48px;
+    color: #fff;
+  }
+  .intro-desc span{
+    font-size: 20px;
+  }
+}
+/* Add these media queries to adjust the styling for landscape mode */
+@media (orientation: landscape) and (max-width: 767px) {
+  .col-md-12 h1 {
+    font-size: 40px; /* Adjust the font size as needed */
+  }
+
+  .intro-desc span {
+    font-size: 18px; /* Adjust the font size as needed */
+  }
+  .scrolldown
+  {
+    display: none;
+  }
+}
+@media (orientation: landscape) and (max-width: 600px) {
+  .col-md-12 h1 {
+    font-size: 40px; /* Adjust the font size as needed */
+  }
+
+  .intro-desc span {
+    font-size: 18px; /* Adjust the font size as needed */
+  }
+  .scrolldown
+  {
+    display: none;
+  }
+}
+@media (orientation: landscape) and (max-width: 900px) {
+  .col-md-12 h1 {
+    font-size: 40px; /* Adjust the font size as needed */
+  }
+
+  .intro-desc span {
+    font-size: 18px; /* Adjust the font size as needed */
+  }
+  .scrolldown
+  {
+    display: none;
+  }
+}
