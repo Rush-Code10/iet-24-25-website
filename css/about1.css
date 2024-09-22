@@ -190,3 +190,105 @@
     padding-top: 20px;
   }
 }
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.about {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.about .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about img {
+  max-width: 150px; /* Adjust size for logo */
+  margin-bottom: 20px;
+}
+
+.all-text {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.all-text h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.all-text h1 {
+  font-size: 36px;
+  color: #111;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.all-text h3 {
+  font-size: 28px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.dept-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dept-list li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.btn1 {
+  margin-top: 30px;
+}
+
+.button2 {
+  font-size: 18px;
+  color: white;
+  background-color: #007BFF;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button2:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .about .main {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .all-text {
+    text-align: left;
+  }
+
+  .btn1 {
+    text-align: left;
+  }
+}
