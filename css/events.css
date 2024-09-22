@@ -1,24 +1,55 @@
-.eventspage {
-  height: auto;
-}
-
 .container-event {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px; /* Adjust the gap as needed */
+  gap: 10px; 
+  padding: 20px;
 }
 
 .box {
-  width: 330px; /* Set the width in pixels */
-  height: 550px; /* Set the height in pixels */
+  width: 300px; 
+  height: 520px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  margin: 0 5px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin: 10px;
-  border: 0.5px solid rgb(112, 104, 104);
-  margin-bottom: 20px; /* Adjust the margin as needed */
+  align-items: center;
+  text-align: center;
+}
+
+.front {
+  z-index: 2;
+  background-color: #fff;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #f8f8f8;
+  padding: 20px; /* Increase padding for the flipped part */
+  text-align: justify; /* Justify the text */
+}
+
+.box:hover .card {
+  transform: rotateY(180deg);
 }
 
 .top-box {
@@ -37,27 +68,24 @@
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  /* Add padding-top to create space between top and h3 */
 }
 
 .image3 img {
   max-width: 100%;
-  height: 330px; /* Set the height in pixels */
+  height: 300px;
   object-fit: fill;
 }
 
 .bottom-box h3 {
   font-family: 'Dosis';
-  font-size: 30px;
+  font-size: 28px;
   margin: 0;
-  /* Reset margin */
 }
 
 .bottom-box p {
   font-family: 'Nunito';
-  font-size: 20px;
+  font-size: 18px;
   margin: 0;
-  /* Reset margin */
 }
 
 .events-title {
@@ -65,72 +93,9 @@
   color: #9C67AB;
   font-weight: 700;
   margin-bottom: 20px;
-}
-@media (max-width: 1000px)
-{
-  .container-event{
-    display: block;
-  }
-}
-@media (max-width: 800px) {
-  .box {
-    width: 330px; /* Adjust the width for smaller screens */
-    height: 550px; /* Adjust the height for smaller screens */
-  }
-  
-.image3 img {
-  max-width: 100%;
-  height: 330px; /* Set the height in pixels */
-  object-fit: fill;
-}
+  text-shadow: 2px 2px 4px #1a091d;
 }
 
-@media (max-width: 650px) {
-  .box {
-    width: 330px; /* Adjust the width for smaller screens */
-    height: 550px; /* Adjust the height for smaller screens */
-  }
-
-  .image3 img {
-    height: 330px; /* Adjust the image height for smaller screens */
-  }
-}
-
-@media (max-width: 400px) {
-  .box {
-    width: 300px; /* Adjust the width for smaller screens */
-    height: 500px; /* Adjust the height for smaller screens */
-  }
-
-  .image3 img {
-    height: 300px; /* Adjust the image height for smaller screens */
-  }
-  .bottom-box h3 {
-    font-size: 25px; /* Adjust the font size for smaller screens */
-  }
-
-  .bottom-box p {
-    font-size: 15px; /* Adjust the font size for smaller screens */
-  }
-}
-@media (max-width: 400px) {
-  .box {
-    width: 260px; /* Adjust the width for smaller screens */
-    height: 480px; /* Adjust the height for smaller screens */
-  }
-
-  .image3 img {
-    height: 290px; /* Adjust the image height for smaller screens */
-  }
-  .bottom-box h3 {
-    font-size: 25px; /* Adjust the font size for smaller screens */
-  }
-
-  .bottom-box p {
-    font-size: 15px; /* Adjust the font size for smaller screens */
-  }
-}
-/* .about-.about-button CSS */
 .about-button {
   --color: #560bad;
   display: inline-block;
@@ -177,4 +142,64 @@
 .about-button:active:before {
   background: #3a0ca3;
   transition: background 0s;
+}
+
+@media (max-width: 1000px) {
+  .container-event {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .box {
+    width: 280px;
+    height: 500px;
+    margin: 5px 0; 
+  }
+}
+
+@media (max-width: 650px) {
+  .container-event {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .box {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .image3 img {
+    height: auto;
+  }
+
+  .bottom-box h3 {
+    font-size: 25px;
+  }
+
+  .bottom-box p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .box {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .image3 img {
+    height: auto;
+  }
+
+  .bottom-box h3 {
+    font-size: 25px;
+  }
+
+  .bottom-box p {
+    font-size: 15px;
+  }
 }

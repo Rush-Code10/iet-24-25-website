@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'acme';
+  src: url('C:\Users\Shrey Parekh\Documents\iet-24-25-website\Acme-Regular.ttf')format('truetype');
+}
+
 .about {
   height: 100vh;
   width: 100%;
@@ -32,7 +37,7 @@
 
 .all-text h4 {
   font-family: 'Roboto';
-  font-size: 18px;
+  font-size: 20px;
   color: black;
   letter-spacing: 1px;
   font-weight: 400;
@@ -43,6 +48,7 @@
   font-size: 50px;
   color: #9C67AB;
   font-weight: 700;
+  text-shadow: 2px 2px 4px #1a091d;
 }
 .auto{
   font-size: 60px;
@@ -53,8 +59,13 @@
 }
 .all-text p {
   font-family: 'Nunito';
-  font-size: 16px;
+  font-size: 18px;
   line-height: 30px;
+  text-align: justify;
+}
+.all-text p:hover{
+  text-shadow: 2px 2px 5px #f1e9f3;
+  transition: 0.5s ease-in-out;
 }
 
 .btn1 {
@@ -98,6 +109,18 @@
 .button1:hover {
   color: #ffffff;
 }
+
+.about {
+  opacity: 0; /* Start hidden */
+  transform: translateX(-500px); /* Start position (off-screen) */
+  transition: opacity 1s ease, transform 1s ease; /* Animation properties */
+}
+
+.about.visible {
+  opacity: 1; /* Fade in */
+  transform: translateX(0); /* Move to final position */
+}
+
 
 /* Media Queries */
 @media (max-width: 1200px) {

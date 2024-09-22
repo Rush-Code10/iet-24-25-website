@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'acme';
+  src: url('C:\Users\Shrey Parekh\Documents\iet-24-25-website\Acme-Regular.ttf')format('truetype');
+}
 body {
   scroll-behavior: smooth;
   margin: 0;
@@ -11,7 +15,7 @@ body {
   object-fit: contain;
 }
 
-/* #homepage {
+#homepage {
       background: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?dpr=2&auto=compress,format&crop=entropy&fit=crop&w=1199&h=799&q=80");
       background-size: 100% 100%;
       opacity: 0.9;
@@ -20,10 +24,57 @@ body {
       justify-content: center;
       align-items: center;
       background-position: center center; 
-  } */
+  }
 .navbar {
   filter: brightness(200%);
 }
+
+
+.home1:hover
+{
+  scale: 1.2;
+  transition: 0.1s ease-in;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px 3px rgb(0, 0, 0);
+  font-weight: bolder;
+  text-align: centscale er2
+}
+
+.about1:hover{
+  scale: 1.12;
+  transition: scale 0.2s ease-in;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px 3px rgb(0, 0, 0);
+  font-weight: bolder;
+  text-align: center;
+}
+
+.event1:hover{
+  scale: 1.12;
+  transition: scale 0.2s ease-in;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px 3px rgb(0, 0, 0);
+  font-weight: bolder;
+  text-align: center;
+}
+
+.contact1:hover{
+  scale: 1.12;
+  transition: scale 0.2s ease-in;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px 3px rgb(0, 0, 0);
+  font-weight: bolder;
+  text-align: center;
+}
+.team1:hover{
+  scale: 1.12;
+  transition: scale 0.2s ease-in;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px 3px rgb(0, 0, 0);
+  font-weight: bolder;
+  text-align: center;
+}
+
 
 #homepage {
   position: relative;
@@ -61,12 +112,22 @@ body {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  /* Set a high z-index value */
+  display: flex;
+  justify-content: center; /* Center-aligns the navbar content */
+}
+
+.navbar:hover{
+  background-color:#221524;
+  transition: 0.23s ease-in-out;
 }
 
 .navbar-brand {
   color: #fff;
   font-size: 24px;
+}
+.nav-item
+{
+  margin: 0 20px;
 }
 
 .navbar-nav .nav-link {
@@ -76,6 +137,7 @@ body {
   margin-right: 10px;
   position: relative;
   transition: color 0.3s;
+  font-family: acme, sans-serif;
 }
 
 .navbar-nav .nav-link:hover {
@@ -95,13 +157,18 @@ body {
   transform-origin: left;
   transition: transform 0.3s;
 }
+.navbar-brand {
+  margin-right: auto; /* Ensures the brand stays at the left */
+}
 
 .navbar-nav .nav-link:hover::before {
   transform: scaleX(1);
 }
 
 .navbar-nav {
-  margin-left: auto;
+  display: flex;
+  justify-content: center; /* Center-aligns the list items */
+  width: 100%; /* Ensures the nav spans the full width */
 }
 
 .navbar-collapse {
