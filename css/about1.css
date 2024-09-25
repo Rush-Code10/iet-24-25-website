@@ -48,7 +48,6 @@
   font-size: 50px;
   color: #9C67AB;
   font-weight: 700;
-  text-shadow: 2px 2px 4px #1a091d;
 }
 .auto{
   font-size: 60px;
@@ -63,10 +62,7 @@
   line-height: 30px;
   text-align: justify;
 }
-.all-text p:hover{
-  text-shadow: 2px 2px 5px #f1e9f3;
-  transition: 0.5s ease-in-out;
-}
+
 
 .btn1 {
   padding-top: 20px;
