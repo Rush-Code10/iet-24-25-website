@@ -99,6 +99,17 @@
   color: #ffffff;
 }
 
+.about {
+  opacity: 0; /* Start hidden */
+  transform: translateX(-500px); /* Start position (off-screen) */
+  transition: opacity 1s ease, transform 1s ease; /* Animation properties */
+}
+
+.about.visible {
+  opacity: 1; /* Fade in */
+  transform: translateX(0); /* Move to final position */
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
   .dept-list {

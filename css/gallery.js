@@ -13,10 +13,15 @@ const showHideIcons = () => {
 
 arrowIcons.forEach(icon => {
     icon.addEventListener("click", () => {
-        let firstImgWidth = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
-        // if clicked icon is left, reduce width value from the carousel scroll left else add to it
-        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-        setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
+        let firstImgWidth = firstImg.clientWidth + 14;
+        const scrollDirection = icon.id === "left" ? -firstImgWidth : firstImgWidth;
+
+        carousel.scrollLeft += scrollDirection;
+
+        carousel.classList.add('animating');
+        setTimeout(() => carousel.classList.remove('animating'), 500);
+
+        setTimeout(() => showHideIcons(), 60);
     });
 });
 
@@ -62,6 +67,19 @@ const dragStop = () => {
     isDragging = false;
     autoSlide();
 }
+
+const checkVisibility = () => {
+    const images = carousel.querySelectorAll("img");
+    images.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            img.classList.add("visible");
+        }
+    });
+};
+
+window.addEventListener("scroll", checkVisibility);
+window.addEventListener("load", checkVisibility);
 
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("touchstart", dragStart);

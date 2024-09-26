@@ -1,23 +1,32 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-.gallery{
+
+.gallery {
   display: flex;
-  padding: 0 35px;
+  padding: 20px 35px;
   min-height: 80vh;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden; /* Prevent overflow */
 }
-.gallery-title{
-    font-size: 50px;
-    color:  #9C67AB;
-    font-weight: 700;
-  }
+
+.gallery-title {
+  font-size: 50px;
+  color: #9C67AB;
+  font-weight: 700;
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below title */
+}
+
 .wrapper{
   display: flex;
   max-width: 1200px;
   position: relative;
 }
+
 .wrapper i{
   top: 50%;
   height: 44px;
@@ -33,39 +42,59 @@
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
+
 .wrapper i:active{
   transform: translateY(-50%) scale(0.9);
 }
+
 .wrapper i:hover{
   background: #f2f2f2;
 }
+
 .wrapper i:first-child{
-  left: -22px;
-  display: none;
+  left: 10px;
 }
+
 .wrapper i:last-child{
-  right: -22px;
+  right: 10px;
 }
+
 .wrapper .carousel{
   font-size: 0px;
   cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
   scroll-behavior: smooth;
+  transition: transform 0.5s ease-in-out;
 }
+
 .carousel.dragging{
   cursor: grab;
-  scroll-behavior: auto;
 }
+
 .carousel.dragging img{
   pointer-events: none;
 }
+
 .carousel img{
   height: 340px;
   object-fit: cover;
   user-select: none;
   margin-left: 14px;
   width: calc(100% / 3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carousel img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel img:hover {
+  transform: scale(1.05); /* Zoom on hover */
+  transition: transform 0.3s ease; /* Smooth zoom */
 }
 .carousel img:first-child{
   margin-left: 0px;
@@ -82,36 +111,24 @@
     width: 100%;
   }
 }
-@media (orientation: landscape) and (max-width: 767px)
-{
-  .gallery{
-    display: flex;
+
+@media (orientation: landscape) and (max-width: 767px) {
+  .gallery {
     padding: 20px 35px;
     min-height: 60vh;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
   }
 }
-@media (orientation: landscape) and (max-width: 600px)
-{
-  .gallery{
-    display: flex;
+
+@media (orientation: landscape) and (max-width: 600px) {
+  .gallery {
     padding: 20px 35px;
     min-height: 60vh;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
   }
 }
-@media (orientation: landscape) and (max-width: 900px)
-{
-  .gallery{
-    display: flex;
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .gallery {
     padding: 20px 35px;
     min-height: 60vh;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
   }
 }

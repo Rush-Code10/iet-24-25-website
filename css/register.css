@@ -1,37 +1,62 @@
+.about2 {
+  height: 100vh;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about2 .main {
+  width: 1290px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  /* Added */
+}
+
+.about2 .main img {
+  width: 580px;
+  max-width: 100%;
+  height: auto;
+  padding: 0 10px;
+}
+
 .button2 {
-    padding: 0.8em 1.61em;
-    border: 2px solid rgb(2, 2, 2);
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 21px;
-    transition: .3s;
-    z-index: 1;
-    font-family: inherit;
-    color: #4F1B59;
-  }
-  
-  .button2::before {
-    content: '';
-    width: 0;
-    height: 300%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    background: #4F1B59;
-    transition: .5s ease;
-    display: block;
-    z-index: -1;
-  }
-  
-  .button2:hover::before {
-    width: 105%;
-  }
-  
-  .button2:hover {
-    color: #ffffff;
-  }
-  
+  padding: 0.8em 1.61em;
+  border: 2px solid rgb(2, 2, 2);
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 21px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #4F1B59;
+}
+
+.button2::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #4F1B59;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.button2:hover::before {
+  width: 105%;
+}
+
+.button2:hover {
+  color: #ffffff;
+}
